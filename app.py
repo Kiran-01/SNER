@@ -1,8 +1,14 @@
 from flask import Flask,url_for,render_template,request
 import spacy
 from spacy import displacy
-# import en_core_web_sm
-nlp = spacy.load('en_core_web_sm')
+# # import en_core_web_sm
+# nlp = spacy.load('en_core_web_sm')
+
+from spacy.lang.en import English
+# from flaskext.markdown import Markdown
+nlp = spacy.load("en_core_web_sm")
+import random
+
 import json
 
 HTML_WRAPPER = """<div style="overflow-x: auto; border: 1px solid #e6e9ef; border-radius: 0.25rem; padding: 1rem">{}</div>"""
