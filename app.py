@@ -34,24 +34,6 @@ def index():
 	return render_template('index.html')
 
 
-# @app.route('/extract',methods=["GET","POST"])
-# def extract():
-#     if request.method == 'POST':
-#         raw_text = request.form['rawtext']
-#         try:
-#             data = wikipedia.summary(raw_text)
-#         except wikipedia.DisambiguationError as e:
-#             text = random.choice(e.options)
-#             data = wikipedia.summary(text)
-#             doc = nlp(txt)
-#             html = displacy.render(doc, style="ent")
-#             html = html.replace("\n\n", "\n")
-#             result = HTML_WRAPPER.format(html)
-
-#     return render_template('result.html', data=data, result=result)
-
-		
-	
 	
 	
 @app.route('/extract',methods=["GET","POST"])
@@ -75,9 +57,11 @@ def previewer():
 def preview():
 	if request.method == 'POST':
 		newtext = request.form['newtext']
-		result = newtext
+		data = wikipedia.summary(newtext)
+		doc = nlp(data)
+		result1 = displacy.render(doc,style="ent")
 
-	return render_template('preview.html',newtext=newtext,result=result)
+	return render_template('preview.html',newtext=data,result=result1)
 
 
 if __name__ == '__main__':
