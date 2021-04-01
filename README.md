@@ -14,11 +14,20 @@ In the previous post, we have learned and practiced how to build named entity re
 Our goal is to build an API that we provide text, for example, a New York Times article (or any article) as input, our named entity extractor will then identify and extract four types of entities: organization, person, location and money. 
 
 ##Requirements
-Flask
-Flask-Markdown
-Spacy
-wikipedia API
++ Flask
++ Flask-Markdown
++ Spacy
++ wikipedia API
 
+#### Images
+![](images/screenshot01.png)
+
+
+![](images/screenshot02.png)
+
+
+
+![](images/screenshot03.png)
 
 ###  app.py
 Our app.py file is rather simple and easy to understand. It contains the main code that will be executed by the Python interpreter to run the Flask web application, it includes the spaCy code for recognizing named entities.
