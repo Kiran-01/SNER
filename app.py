@@ -61,7 +61,7 @@ def preview():
 		doc = nlp(data)
 		result1 = displacy.render(doc,style="ent")
 
-	return render_template('preview.html',data=data,result1=result1)
+	return render_template('preview.html',newtext=data,result=result1)
 
 
 if __name__ == '__main__':
