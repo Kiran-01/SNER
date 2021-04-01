@@ -20,14 +20,14 @@ Our goal is to build an API that we provide text, for example, a New York Times 
 + wikipedia API
 
 #### Images
-![](images/screenshot01.png)
+![](/Images/s1.png)
 
 
-![](images/screenshot02.png)
+![](/Images/s2.png)
 
 
 
-![](images/screenshot03.png)
+![](/Images/s3.png)
 
 ###  app.py
 Our app.py file is rather simple and easy to understand. It contains the main code that will be executed by the Python interpreter to run the Flask web application, it includes the spaCy code for recognizing named entities.
