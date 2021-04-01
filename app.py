@@ -59,9 +59,9 @@ def preview():
 		newtext = request.form['newtext']
 		data = wikipedia.summary(newtext)
 		doc = nlp(data)
-		result1 = displacy.render(doc,style="ent")
+		result= displacy.render(doc,style="ent")
 
-	return render_template('preview.html',newtext=data,result1=result1)
+	return render_template('preview.html',newtext=data,result=result)
 
 
 if __name__ == '__main__':
