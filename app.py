@@ -46,7 +46,7 @@ def extract():
 		html = html.replace("\n\n","\n")
 		result = HTML_WRAPPER.format(html)
 
-	return render_template('result.html',rawtext=txt,result1=result)
+	return render_template('result.html',rawtext=txt,result1=result1)
 
 
 @app.route('/previewer')
@@ -61,7 +61,7 @@ def preview():
 		doc = nlp(data)
 		result1 = displacy.render(doc,style="ent")
 
-	return render_template('preview.html',newtext=data,result=result1)
+	return render_template('preview.html',data=data,result=result1)
 
 
 if __name__ == '__main__':
