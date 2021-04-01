@@ -35,19 +35,6 @@ def index():
 
 
 @app.route('/extract',methods=["GET","POST"])
-# def extract():
-#     if request.method == 'POST':
-#         choice = request.form['taskoption']
-#         rawtext = request.form['rawtext']
-#         try:
-#             data = wikipedia.summary(rawtext)
-#         except wikipedia.DisambiguationError as e:
-#             text = random.choice(e.options)
-#             data = wikipedia.summary(text, sentences)
-#         doc = nlp(txt)
-#         result = displacy.render(docx, style='ent', jupyter=True)
-#     return render_template('result.html', txt=txt, result=result)
-
 def extract():
     if request.method == 'POST':
         raw_text = request.form['rawtext']
@@ -61,12 +48,19 @@ def extract():
             html = html.replace("\n\n", "\n")
             result = HTML_WRAPPER.format(html)
 
-    return render_template('result.html', rawtext=data, result=result)
+    return render_template('result.html', data=data, result=result)
 
 		
+	
+	
+	
+# @app.route('/extract',methods=["GET","POST"])
+# def extract():
+# 	if request.method == 'POST':
+# 		raw_text = request.form['rawtext']
 		
 # 		docx = nlp(raw_text)
-# 		html = displacy.render(doc,style="ent")
+# 		html = displacy.render(docx,style="ent")
 # 		html = html.replace("\n\n","\n")
 # 		result = HTML_WRAPPER.format(html)
 
