@@ -46,7 +46,7 @@ def extract():
 		html = html.replace("\n\n","\n")
 		result = HTML_WRAPPER.format(html)
 
-	return render_template('result.html',rawtext=txt,result=result)
+	return render_template('result.html',rawtext=txt,result1=result)
 
 
 @app.route('/previewer')
