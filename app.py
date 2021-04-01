@@ -48,21 +48,20 @@ def index():
 #     return render_template('result.html', txt=txt, result=result)
 
 def extract():
-	if request.method == 'POST':
-		raw_text = request.form['rawtext']
-		try:
-                    data = wikipedia.summary(raw_text)
-                except wikipedia.DisambiguationError as e:
-                    text = random.choice(e.options)
-                    data = wikipedia.summary(text)
-		    doc = nlp(txt)
-		    html = displacy.render(doc,style="ent")
-		    html = html.replace("\n\n","\n")
-		    result = HTML_WRAPPER.format(html)
-		
-#                     result = displacy.render(doc, style='ent')
-        return render_template('result.html', rawtext=data, result=result)
-		
+    if request.method == 'POST':
+        raw_text = request.form['rawtext']
+        try:
+            data = wikipedia.summary(raw_text)
+        except wikipedia.DisambiguationError as e:
+            text = random.choice(e.options)
+            data = wikipedia.summary(text)
+            doc = nlp(txt)
+            html = displacy.render(doc, style="ent")
+            html = html.replace("\n\n", "\n")
+            result = HTML_WRAPPER.format(html)
+
+    return render_template('result.html', rawtext=data, result=result)
+
 		
 		
 # 		docx = nlp(raw_text)
