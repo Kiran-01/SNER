@@ -1,5 +1,6 @@
 from flask import Flask,url_for,render_template,request
 import spacy
+import wikipedia
 from spacy import displacy
 # # import en_core_web_sm
 # nlp = spacy.load('en_core_web_sm')
