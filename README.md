@@ -12,7 +12,7 @@ In the previous post, we have learned and practiced how to build named entity re
 
 ## A Flask API
 
-Our goal is to build an API that we provide text, for example, a New York Times article (or any article) as input, our named entity extractor will then identify and extract four types of entities: organization, person, location and money. 
+Our goal is to build an API that we provide text, for example, a New York Times article (or any article) as input, our named entity extractor will then identify and extract all types of entities like  organization, person, location and money, etc. 
 
 ## Requirements
 + Flask
