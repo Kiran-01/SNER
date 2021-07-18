@@ -6,9 +6,7 @@
 Building a Flask API to Automatically Extract Named Entities Using Wikipedia API
 
 
-The overwhelming amount of unstructured text data available today provides a rich source of information if the data can be structured. Named-entity Recognition (NER)(also known as Named-entity Extraction) is one of the first steps to build knowledge from semi-structured and unstructured text sources.
-Only after NER, we will be able to reveal at a minimum, who, and what, the information contains. As a result, a data science team would be able to see a structured representation of all of the the names of people, companies, locations and so on in a corpus that could serve as a point of departure for further analysis and investigation.
-In the previous post, we have learned and practiced how to build named entity recognizer using NLTK and spaCy. To take steps further, create something useful, this article will cover how to develop and deploy a simple named entities extractor using spaCy and serve it with a Flask API in python.
+
 
 ## A Flask API
 
